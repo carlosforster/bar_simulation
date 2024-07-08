@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar scenario simulation</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+YYYYY
+
+    <script>
+		const anima = 		
+XXXXX
+		
+
+        const groups = [
+		  'cli1s', 'cli2s', 'cli3s', 'cli4s',
+		  'cli5s', 'cli6s', 'cli7s', 'cli8s',
+		  'cli1w', 'cli2w', 'cli3w', 'cli4w',
+		  'cli5w', 'cli6w', 'cli7w', 'cli8w',
+		  'cli1b', 'cli2b', 'cli3b', 'cli4b',
+		  'cli5b', 'cli6b', 'cli7b', 'cli8b',
+		  'g1','g2', 'g1s', 'g2s', 'g1l', 'g2l',
+		  'c1l','c2l','c3l', 'c4l', 'c5l',
+		  'c1s','c2s','c3s', 'c4s', 'c5s',
+		  'c1u','c2u','c3u', 'c4u', 'c5u',
+		  ];
+        let currentIndex = 0;
+
+        function toggleVisibility() {
+            // Hide all groups
+            groups.forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+
+            // Show the current group
+             anima[currentIndex].forEach(id => {
+                document.getElementById(id).classList.remove('hidden');
+            });
+
+            // Update index
+            currentIndex = (currentIndex + 1) % anima.length;
+        }
+
+        // Initialize all groups to be hidden except the first one
+        toggleVisibility();
+
+        // Set interval to toggle visibility every 2 seconds
+        setInterval(toggleVisibility, 2000);
+    </script>
+</body>
+</html>
